@@ -20,7 +20,7 @@ app.use((req, res, next) => {
       if(err)
       console.log('unable to add data to file Error message ='+err);
    });
-   next();
+   next(); 
 })
 
 // app.use( (req,res,next)=>{

@@ -21,7 +21,9 @@ app.use((req, res, next) => {
       console.log('unable to add data to file Error message ='+err);
    });  
    next(); 
-})
+})   
+
+console.log('commit2');
 
 // app.use( (req,res,next)=>{
 //    res.render('maintaince.hbs');

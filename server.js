@@ -19,7 +19,7 @@ app.use((req, res, next) => {
    fs.appendFile('server.log',log+'\n',(err)=>{
       if(err)
       console.log('unable to add data to file Error message ='+err);
-   });
+   });  
    next(); 
 })
 

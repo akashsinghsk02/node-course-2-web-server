@@ -1,10 +1,8 @@
-console.log('server.js')
 const express = require('express');
-
 const fs = require('fs'); 
-
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 let app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -23,7 +21,6 @@ app.use((req, res, next) => {
    next(); 
 })   
 
-console.log('commit2');
 
 // app.use( (req,res,next)=>{
 //    res.render('maintaince.hbs');
@@ -62,6 +59,6 @@ app.get('/bad', (req, res) => {
    });
 })
 
-app.listen(3000, () => {
-   console.log('Server started')
+app.listen(port, () => {
+   console.log(`Server started at port ${port}`);
 });

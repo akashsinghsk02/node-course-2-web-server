@@ -47,6 +47,15 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/projects', (req, res) => {
+
+   res.render('projects.hbs', {
+      pageInformation: 'This is  Project',
+      paragraph: 'This is hbs dynamic rendering paragraph'
+   });
+
+});
+
 app.get('/about', (req, res) => {
    res.render('about.hbs', {
       pageInformation: 'This is about page dynamic renderding (about)',
